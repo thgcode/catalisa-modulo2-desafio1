@@ -1,5 +1,7 @@
 package com.zup;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -18,6 +20,8 @@ public class Main {
         int numero;
         int pontuacao = 0;
         Scanner entrada = new Scanner(System.in);
+        List <Integer> acertos = new ArrayList <>();
+        List<Integer> erros = new ArrayList <>();
 
         System.out.println("Jogo da sorte");
 
@@ -61,7 +65,10 @@ public class Main {
             }
 
             if (!acertou) {
+                erros.add(numeroSorteado);
                 System.out.println("O número sorteado era " + numeroSorteado);
+            } else {
+                acertos.add(numeroSorteado);
             }
 
             System.out.println("Quer jogar de novo? Digite S ou N:");
@@ -69,5 +76,9 @@ public class Main {
         } while (continuar);
 
         System.out.println("Você obteve " + pontuacao + " pontos.");
+        System.out.println("Você acertou os seguintes números:");
+        System.out.println(acertos);
+        System.out.println("Você errou os seguintes números:");
+        System.out.println(erros);
     }
 }
