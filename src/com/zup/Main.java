@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
         Random sorteador = new Random();
-        int numeroSorteado = sorteador.nextInt(10) + 1;
+        int numeroSorteado;
         int numero;
         int pontuacao = 0;
         Scanner entrada = new Scanner(System.in);
@@ -43,6 +43,8 @@ public class Main {
             }
 
             boolean acertou = false;
+            numeroSorteado = sorteador.nextInt(10) + 1;
+
             for (int tentativa = 0; tentativa < tentativasMax && !acertou; tentativa++) {
                 System.out.println("Tentativa " + (tentativa + 1) + " de " + tentativasMax);
 
