@@ -18,10 +18,10 @@ public class Main {
 
         if (numero == (numeroSorteado - 1)) {
             pontuacao += 5;
-            System.out.println("O número é menor.");
+            System.out.println("O número estava um acima do que você tentou.");
         } else if (numero == (numeroSorteado + 1)) {
             pontuacao += 5;
-            System.out.println("O número é maior.");
+            System.out.println("O número estava um abaixo do que você tentou.");
         } else if (numero == numeroSorteado) {
             pontuacao = 10;
             System.out.println("Você acertou!");
