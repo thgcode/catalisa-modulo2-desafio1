@@ -8,6 +8,7 @@ public class Main {
         Random sorteador = new Random();
         int numeroSorteado = sorteador.nextInt(10) + 1;
         int numero;
+        int pontuacao = 0;
         Scanner entrada = new Scanner(System.in);
 
         System.out.println("Jogo da sorte");
@@ -16,13 +17,18 @@ public class Main {
         numero = entrada.nextInt();
 
         if (numero == (numeroSorteado - 1)) {
+            pontuacao += 5;
             System.out.println("O número é menor.");
         } else if (numero == (numeroSorteado + 1)) {
+            pontuacao += 5;
             System.out.println("O número é maior.");
         } else if (numero == numeroSorteado) {
+            pontuacao = 10;
             System.out.println("Você acertou!");
         } else {
             System.out.println("Você errou. O número sorteado era " + numeroSorteado);
         }
+
+        System.out.println("Você obteve " + pontuacao + " pontos.");
     }
 }
